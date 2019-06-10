@@ -7,7 +7,7 @@ def choose_level
   puts '2: Medium'
   puts '3: Svårt'
   level = gets.chomp
-  @game = GuessNumber.new(level.to_i)
+  @game = GuessNumber.new(level)
   make_a_guess
 end
 

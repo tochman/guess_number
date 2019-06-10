@@ -14,9 +14,9 @@ class GuessNumber
     if number == @number_to_guess
       "You win. You had #{@guess_count} guesses"
     elsif number > @number_to_guess
-      'Lower'
+      'You need to go lower'
     elsif number < @number_to_guess
-      'Higher'
+      'You need to go higher'
     end
   end
 
@@ -29,11 +29,11 @@ class GuessNumber
   def set_level(level)
     level.downcase! if level.is_a? String
     case level
-    when 1, 'lätt'
+    when '1', 'lätt'
       10
-    when 2, 'medium'
+    when '2', 'medium'
       100
-    when 3, 'svårt'
+    when '3', 'svårt'
       1000
     else
       raise 'Only choose the options above'
