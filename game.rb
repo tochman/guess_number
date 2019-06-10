@@ -16,10 +16,7 @@ def make_a_guess
   player_choice = gets.chomp
   result = @game.guess(player_choice.to_i)
   puts result
-  unless result.include?('You win')
-    make_a_guess
-  end
-  
+  make_a_guess unless result.include?('You win')
 end
 
 choose_level
